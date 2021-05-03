@@ -18,6 +18,7 @@ print('Program running')
 
 while True:
     if not GPIO.input(2):
+        print('pushed')
         GPIO.output(16, GPIO.HIGH)
         time.sleep(5)
         GPIO.output(20, GPIO.HIGH)
@@ -32,8 +33,8 @@ while True:
         GPIO.output(20, GPIO.LOW)
     else:
         GPIO.output(16, GPIO.HIGH)
-        time.sleep(0.2)
+        time.sleep(0.05)
         GPIO.output(16, GPIO.LOW)
-        time.sleep(0.2)
+        time.sleep(0.05)
 
 GPIO.cleanup()
